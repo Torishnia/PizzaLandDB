@@ -1,2 +1,0 @@
-# PizzaLandDB
-PizzaLandDB for migration
