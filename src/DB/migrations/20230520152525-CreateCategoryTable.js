@@ -4,7 +4,7 @@ const { transaction } = require('../../utils');
 
 module.exports = {
   up: (queryInterface) => queryInterface.sequelize.query(transaction(`
-    CREATE TYPE "public"."Category_title_enum" AS ENUM('Meat', 'Vegetarian', 'Grill', 'Spicy');
+    CREATE TYPE "public"."Category_title_enum" AS ENUM('MEAT', 'VEGETARIAN', 'GRILL', 'SPICY');
     
     CREATE TABLE IF NOT EXISTS "public"."Category" (
       "id" SERIAL PRIMARY KEY,
