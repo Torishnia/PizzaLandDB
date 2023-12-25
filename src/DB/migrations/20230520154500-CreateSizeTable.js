@@ -6,7 +6,7 @@ module.exports = {
   up: (queryInterface) => queryInterface.sequelize.query(transaction(`
     CREATE TYPE "public"."Size_title_enum" AS ENUM('S', 'M', 'L');
     CREATE TYPE "public"."Size_size_enum" AS ENUM('25', '35', '45');
-    CREATE TYPE "public"."Size_coefficient_enum" AS ENUM('1', '1.5', '2');
+    CREATE TYPE "public"."Size_coefficient_enum" AS ENUM('1', '2', '3');
     
     CREATE TABLE IF NOT EXISTS "public"."Size" (
       "id" SERIAL PRIMARY KEY,

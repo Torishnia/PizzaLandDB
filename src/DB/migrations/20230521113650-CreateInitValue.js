@@ -10,8 +10,8 @@ module.exports = {
     INSERT INTO "public"."Category" ("id", "title") VALUES ('4', 'SPICY');
 
     INSERT INTO "public"."Size" ("id", "title", "size", "coefficient") VALUES ('1', 'S', '25', '1');
-    INSERT INTO "public"."Size" ("id", "title", "size", "coefficient") VALUES ('2', 'M', '35', '1.5');
-    INSERT INTO "public"."Size" ("id", "title", "size", "coefficient") VALUES ('3', 'L', '45', '2');
+    INSERT INTO "public"."Size" ("id", "title", "size", "coefficient") VALUES ('2', 'M', '35', '2');
+    INSERT INTO "public"."Size" ("id", "title", "size", "coefficient") VALUES ('3', 'L', '45', '3');
 
     INSERT INTO "public"."Type" ("id", "title") VALUES ('1', 'THIN');
     INSERT INTO "public"."Type" ("id", "title") VALUES ('2', 'TRADITIONAL');
