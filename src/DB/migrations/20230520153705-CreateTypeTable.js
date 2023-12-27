@@ -8,7 +8,7 @@ module.exports = {
 
     CREATE TABLE IF NOT EXISTS "public"."Type" (
       "id" SERIAL PRIMARY KEY,
-      "title" "public"."Type_title_enum" NOT NULL
+      "title" "public"."Type_title_enum" NOT NULL DEFAULT 'THIN'
     );
   `)),
 

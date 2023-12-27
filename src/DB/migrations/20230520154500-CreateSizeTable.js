@@ -10,9 +10,9 @@ module.exports = {
     
     CREATE TABLE IF NOT EXISTS "public"."Size" (
       "id" SERIAL PRIMARY KEY,
-      "title" "public"."Size_title_enum" NOT NULL,
-      "size" "public"."Size_size_enum" NOT NULL,
-      "coefficient" "public"."Size_coefficient_enum" NOT NULL
+      "title" "public"."Size_title_enum" NOT NULL DEFAULT 'S',
+      "size" "public"."Size_size_enum" NOT NULL DEFAULT '25',
+      "coefficient" "public"."Size_coefficient_enum" NOT NULL DEFAULT '1'
     );
   `)),
 
