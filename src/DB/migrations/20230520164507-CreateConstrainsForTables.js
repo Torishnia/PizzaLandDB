@@ -12,9 +12,13 @@ module.exports = {
 
     ALTER TABLE "public"."pizza_size" ADD CONSTRAINT "FK_ea052edd06a4618b9bd22ad63ce" FOREIGN KEY ("pizzaId") REFERENCES "Pizza"("id") ON DELETE CASCADE ON UPDATE CASCADE;
     ALTER TABLE "public"."pizza_size" ADD CONSTRAINT "FK_41792502df637615377df587d3a" FOREIGN KEY ("sizeId") REFERENCES "Size"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+    ALTER TABLE "public"."Order" ADD CONSTRAINT "FK_cdc25a0a42e8f451020a26680b3" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE NO ACTION ON UPDATE NO ACTION;
   `)),
 
   down: (queryInterface) => queryInterface.sequelize.query(transaction(`
+    ALTER TABLE "public"."Order" DROP CONSTRAINT "FK_cdc25a0a42e8f451020a26680b3";
+
     ALTER TABLE "public"."pizza_size" DROP CONSTRAINT "FK_41792502df637615377df587d3a";
     ALTER TABLE "public"."pizza_size" DROP CONSTRAINT "FK_ea052edd06a4618b9bd22ad63ce";
 
