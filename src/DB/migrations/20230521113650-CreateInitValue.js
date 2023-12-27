@@ -85,9 +85,21 @@ module.exports = {
     INSERT INTO "public"."pizza_size" ("pizzaId", "sizeId") VALUES ('6', '1');
     INSERT INTO "public"."pizza_size" ("pizzaId", "sizeId") VALUES ('6', '2');
     INSERT INTO "public"."pizza_size" ("pizzaId", "sizeId") VALUES ('6', '3');
+
+    INSERT INTO "public"."User" ("id", "name", "phone", "address") VALUES ('1', 'admin', '380991234567', 'Kiev, str. Soborna 1');
+
+    INSERT INTO "public"."Order" ("id", "payCash", "totalPrice", "userId") VALUES ('1', 'true', '85', '1');
+
+    INSERT INTO "public"."Position" ("id", "pizzaId", "typeId", "sizeId", "count", "price", "orderId")
+    VALUES
+      ('1', '6', '1', '2', '2', '40', '1'),
+      ('2', '4', '1', '3', '1', '45', '1');
   `)),
 
   down: (queryInterface) => queryInterface.sequelize.query(transaction(`
+    DELETE FROM "public"."Position";
+    DELETE FROM "public"."Order";
+    DELETE FROM "public"."User";
     DELETE FROM "public"."pizza_size";
     DELETE FROM "public"."pizza_type";
     DELETE FROM "public"."Images"; 
